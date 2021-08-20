@@ -23,6 +23,17 @@ public class MemberServiceImpl implements MemberService {
         list.add(mem1); // listにmem1のユーザーデータを格納
         list.add(mem2); // listにmem2のユーザーデータを格納
 
-        return list; // listへ返す
+        return list; // listを返す
+    }
+
+    @Override
+    public int sumOf(int x, int y) {
+        /* xからyまでの範囲でインクリメントしていくメソッド */
+        int sum = 0; // ローカル変数sumの作成
+        for (int i = x; i <= y; i++) {
+            /* forループで初期値xをインクリメントしていきy以下の間は継続する。 */
+            sum += i; // sumに値を格納していく
+        }
+        return sum; // sumを返す
     }
 }
