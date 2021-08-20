@@ -10,5 +10,4 @@ public interface MemberService {
 
     ArrayList<Member> getAll();
 
-
 }
