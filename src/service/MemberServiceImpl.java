@@ -5,7 +5,7 @@ import entity.Member;
 import java.util.ArrayList;
 
 public class MemberServiceImpl implements MemberService {
-    /* 実装クラスの作成 */
+    /* 実装クラス */
 
     @Override
     public String greet(int i) {
