@@ -7,6 +7,14 @@ import java.util.ArrayList;
 public class MemberServiceImpl implements MemberService {
     /* 実装クラス */
 
+    /* シングルトン */
+    private static MemberServiceImpl singleton = new MemberServiceImpl(); // MemberServiceImplを使ってsingletonインスタンスを作成する（privateなのでsingleton呼び出し不可）
+    private MemberServiceImpl() {} // 外部からのnewを禁止する
+    public static MemberServiceImpl getInstance() {
+        /* singletonインスタンスを呼び出す為のメソッド */
+        return singleton; // singletonを返す
+    }
+
     @Override
     public String greet(int i) {
         /* 挨拶のメソッド */

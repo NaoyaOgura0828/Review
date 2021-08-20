@@ -10,7 +10,8 @@ public class Main {
 
     public static void main(String[] args) {
         /* 実行メソッド */
-        MemberServiceImpl service = new MemberServiceImpl();  // MemberServiceImplを使ってserviceインスタンスを作成する
+//        MemberServiceImpl service = new MemberServiceImpl();  // MemberServiceImplを使ってserviceインスタンスを作成する（シングルトンではない場合のMemberServiceImplの呼び出し方）
+        MemberServiceImpl service = MemberServiceImpl.getInstance(); // MemberServiceImplを使ってserviceインスタンスを作成する（シングルトンでのMemberServiceImplの呼び出し方）
         System.out.println(service.greet(2)); // greetメソッドを実行して引数内の挨拶文を出力する
 
         System.out.println(service.getAll()); // getAllメソッドを実行してアドレスを出力する（toStringメソッドはオーバーライドしてない）
